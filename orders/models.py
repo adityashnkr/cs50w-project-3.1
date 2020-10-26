@@ -46,3 +46,49 @@ class Pizza(Item):
 
     def __str__(self):
         return f"{self.crust} Pizza with {self.name} ({self.size}) _ {self.price}"
+
+
+class Topping(Item):
+    """Define toppings."""
+
+    def __str__(self):
+        return f"{self.name}"
+
+
+class Sub(Item):
+    """Define sub-menus."""
+
+    def __str__(self):
+        return f"{self.name} ({self.size}) _ {self.price}"
+
+
+class Extra(Item):
+    """Define extra-options."""
+
+    def __str__(self):
+        return f"{self.name}"
+
+
+class Pasta(Item):
+    """Define pastas."""
+
+    def __str__(self):
+        return f"{self.name} _ {self.price}"
+
+
+class Salad(Item):
+    """Define salads."""
+
+    def __str__(self):
+        return f"{self.name} _ {self.price}"
+
+
+class Dinner(Item):
+    """Define dinner platters."""
+
+    class Meta:
+        verbose_name = "Dinner Platter"
+        verbose_name_plural = "Dinner Platters"
+
+    def __str__(self):
+        return f"{self.name} ({self.size}) _ {self.price}"

@@ -4,4 +4,4 @@ from .models import *
 
 
 def home_view(request, *args, **kwargs):
-    return HttpResponse("hello")
+    return render(request, "detail_view/home.html")
